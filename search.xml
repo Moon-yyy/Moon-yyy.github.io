@@ -4,13 +4,38 @@
   
     
     <entry>
-      <title>GitCalendar个性化</title>
-      <link href="/2025/05/02/GitCalendar%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
-      <url>/2025/05/02/GitCalendar%E4%B8%AA%E6%80%A7%E5%8C%96/</url>
+      <title></title>
+      <link href="/2025/06/25/HTML%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2025/06/25/HTML%E5%AD%A6%E4%B9%A0/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GitCalendar个性化</title>
+      <link href="/2025/05/02/GitCalendar%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
+      <url>/2025/05/02/GitCalendar%E4%B8%AA%E6%80%A7%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Gitcalendar个性化"><a href="#Gitcalendar个性化" class="headerlink" title="Gitcalendar个性化"></a>Gitcalendar个性化</h2><ul><li><strong>首先咱来看看效果预览</strong></li></ul><h4 id="安装指南"><a href="#安装指南" class="headerlink" title="安装指南"></a>安装指南</h4><ol><li>在博客根目录下打开终端，输入命令安装插件</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-filter-gitcalendar --save</span><br></pre></td></tr></table></figure><ol start="2"><li>添加配置</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># hexo-filter-gitcalendar</span><br><span class="line">gitcalendar:</span><br><span class="line">  enable: true # 开关</span><br><span class="line">  priority: 5 #过滤器优先权</span><br><span class="line">  enable_page: / # 应用页面</span><br><span class="line">  # butterfly挂载容器</span><br><span class="line">  layout: # 挂载容器类型</span><br><span class="line">    type: id</span><br><span class="line">    name: recent-posts</span><br><span class="line">    index: 0</span><br><span class="line">  user: Fomalhaut-Blog #git用户名</span><br><span class="line">  apiurl: &#x27;https://gitcalendar.fomal.cc&#x27;# 这是我的API，最好自己弄一个</span><br><span class="line">  minheight:</span><br><span class="line">    pc: 280px #桌面端最小高度</span><br><span class="line">    mibile: 0px #移动端最小高度</span><br><span class="line">  color: &quot;[&#x27;#d9e0df&#x27;, &#x27;#c6e0dc&#x27;, &#x27;#a8dcd4&#x27;, &#x27;#9adcd2&#x27;, &#x27;#89ded1&#x27;, &#x27;#77e0d0&#x27;, &#x27;#5fdecb&#x27;, &#x27;#47dcc6&#x27;, &#x27;#39dcc3&#x27;, &#x27;#1fdabe&#x27;, &#x27;#00dab9&#x27;]&quot; # 目前我在用的</span><br><span class="line">  # &quot;[&#x27;#e4dfd7&#x27;, &#x27;#f9f4dc&#x27;, &#x27;#f7e8aa&#x27;, &#x27;#f7e8aa&#x27;, &#x27;#f8df72&#x27;, &#x27;#fcd217&#x27;, &#x27;#fcc515&#x27;, &#x27;#f28e16&#x27;, &#x27;#fb8b05&#x27;, &#x27;#d85916&#x27;, &#x27;#f43e06&#x27;]&quot; #橘黄色调</span><br><span class="line">  # color: &quot;[&#x27;#ebedf0&#x27;, &#x27;#fdcdec&#x27;, &#x27;#fc9bd9&#x27;, &#x27;#fa6ac5&#x27;, &#x27;#f838b2&#x27;, &#x27;#f5089f&#x27;, &#x27;#c4067e&#x27;, &#x27;#92055e&#x27;, &#x27;#540336&#x27;, &#x27;#48022f&#x27;, &#x27;#30021f&#x27;]&quot; #浅紫色调</span><br><span class="line">  # color: &quot;[&#x27;#ebedf0&#x27;, &#x27;#f0fff4&#x27;, &#x27;#dcffe4&#x27;, &#x27;#bef5cb&#x27;, &#x27;#85e89d&#x27;, &#x27;#34d058&#x27;, &#x27;#28a745&#x27;, &#x27;#22863a&#x27;, &#x27;#176f2c&#x27;, &#x27;#165c26&#x27;, &#x27;#144620&#x27;]&quot; #翠绿色调</span><br><span class="line">  # color: &quot;[&#x27;#ebedf0&#x27;, &#x27;#f1f8ff&#x27;, &#x27;#dbedff&#x27;, &#x27;#c8e1ff&#x27;, &#x27;#79b8ff&#x27;, &#x27;#2188ff&#x27;, &#x27;#0366d6&#x27;, &#x27;#005cc5&#x27;, &#x27;#044289&#x27;, &#x27;#032f62&#x27;, &#x27;#05264c&#x27;]&quot; #天青色调</span><br><span class="line">  container: .recent-post-item(style=&#x27;width:100%;height:auto;padding:10px;&#x27;) #父元素容器，需要使用pug语法</span><br><span class="line">  gitcalendar_css: https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css</span><br><span class="line">  gitcalendar_js: https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="3"><li>参数释义</li></ol><table><thead><tr><th align="center">参数</th><th align="left">备选值&#x2F;类型</th><th align="left">释义</th></tr></thead><tbody><tr><td align="center">priority</td><td align="left">number</td><td align="left">【可选】过滤器优先级，数值越小，执行越早，默认为10，选填</td></tr><tr><td align="center">enable</td><td align="left">true&#x2F;false</td><td align="left">【必选】控制开关</td></tr><tr><td align="center">enable_page</td><td align="left">path&#x2F;all</td><td align="left">【可选】填写想要应用的页面的相对路径（即路由地址）,如根目录就填’&#x2F;‘,分类页面就填’&#x2F;categories&#x2F;‘。若要应用于所有页面，就填’all’，默认为’&#x2F;‘</td></tr><tr><td align="center">layout.type</td><td align="left">id&#x2F;class</td><td align="left">【可选】挂载容器类型，填写id或class，不填则默认为id</td></tr><tr><td align="center"><a href="http://layout.name/">layout.name</a></td><td align="left">text</td><td align="left">【必选】挂载容器名称</td></tr><tr><td align="center">layout.index</td><td align="left">0和正整数</td><td align="left">【可选】前提是layout.type为class，因为同一页面可能有多个class，此项用来确认究竟排在第几个顺位</td></tr><tr><td align="center">user</td><td align="left">text</td><td align="left">【必选】git用户名</td></tr><tr><td align="center">apiurl</td><td align="left">url</td><td align="left">【可选】默认使用提供文档提供的api，但还是建议自建api，参考教程：<a href="https://akilar.top/posts/1f9c68c9/#%E8%87%AA%E5%BB%BAAPI%E9%83%A8%E7%BD%B2">自建API部署</a></td></tr><tr><td align="center">minheight.pc</td><td align="left">280px</td><td align="left">【可选】桌面端最小高度，默认为280px</td></tr><tr><td align="center">minheight.mobile</td><td align="left">0px</td><td align="left">【可选】移动端最小高度，默认为0px</td></tr><tr><td align="center">color</td><td align="left">list</td><td align="left">【可选】一个包含11个色值的数组，文档给出了四款预设值</td></tr><tr><td align="center">container</td><td align="left">pug</td><td align="left">【可选】预留的父元素容器，用以适配多主题，需要用pug语法填写，目前已适配<a href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a>，<a href="https://github.com/volantis-x/hexo-theme-volantis">volantis</a>，<a href="https://github.com/blinkfox/hexo-theme-matery">matery</a>，<a href="https://github.com/lete114/hexo-theme-MengD">mengd</a>主题，这四个主题，插件会自自动识别<code>_config.yml</code>内填写的<code>theme</code>配置项。其余主题需要自己填写父元素容器。</td></tr><tr><td align="center">gitcalendar_css</td><td align="left">URL</td><td align="left">【可选】自定义CSS样式链接</td></tr><tr><td align="center">gitcalendar_js</td><td align="left">URL</td><td align="left">【可选】自定义js链接</td></tr></tbody></table><h4 id="自定义挂载容器"><a href="#自定义挂载容器" class="headerlink" title="自定义挂载容器"></a>自定义挂载容器</h4><p>可以不挂在首页，也可以自定义挂在关于或者统计等页面：</p><ol><li>在对应页面创建一个DOM让插件有地方挂载</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -64,6 +89,17 @@
     
     
     <entry>
+      <title></title>
+      <link href="/css/center-atom.css"/>
+      <url>/css/center-atom.css</url>
+      
+        <content type="html"><![CDATA[.pace.pace-inactive {display: none;}.pace {-webkit-pointer-events: none;pointer-events: none;-webkit-user-select: none;-moz-user-select: none;user-select: none;z-index: 2000;position: fixed;height: 60px;width: 100px;margin: auto;top: 0;left: 0;right: 0;bottom: 0;}.pace .pace-progress {z-index: 2000;position: absolute;height: 60px;width: 100px;-webkit-transform: translate3d(0, 0, 0) !important;-ms-transform: translate3d(0, 0, 0) !important;transform: translate3d(0, 0, 0) !important;}.pace .pace-progress:before {content: attr(data-progress-text);text-align: center;color: #fff;background: #29d;border-radius: 50%;font-family: "Helvetica Neue", sans-serif;font-size: 14px;font-weight: 100;line-height: 1;padding: 20% 0 7px;width: 50%;height: 40%;margin: 10px 0 0 30px;display: block;z-index: 999;position: absolute;}.pace .pace-activity {font-size: 15px;line-height: 1;z-index: 2000;position: absolute;height: 60px;width: 100px;display: block;-webkit-animation: pace-theme-center-atom-spin 2s linear infinite;-moz-animation: pace-theme-center-atom-spin 2s linear infinite;-o-animation: pace-theme-center-atom-spin 2s linear infinite;animation: pace-theme-center-atom-spin 2s linear infinite;}.pace .pace-activity {border-radius: 50%;border: 5px solid #29d;content: ' ';display: block;position: absolute;top: 0;left: 0;height: 60px;width: 100px;}.pace .pace-activity:after {border-radius: 50%;border: 5px solid #29d;content: ' ';display: block;position: absolute;top: -5px;left: -5px;height: 60px;width: 100px;-webkit-transform: rotate(60deg);-moz-transform: rotate(60deg);-o-transform: rotate(60deg);transform: rotate(60deg);}.pace .pace-activity:before {border-radius: 50%;border: 5px solid #29d;content: ' ';display: block;position: absolute;top: -5px;left: -5px;height: 60px;width: 100px;-webkit-transform: rotate(120deg);-moz-transform: rotate(120deg);-o-transform: rotate(120deg);transform: rotate(120deg);}@-webkit-keyframes pace-theme-center-atom-spin {0%   { -webkit-transform: rotate(0deg) }100% { -webkit-transform: rotate(359deg) }}@-moz-keyframes pace-theme-center-atom-spin {0%   { -moz-transform: rotate(0deg) }100% { -moz-transform: rotate(359deg) }}@-o-keyframes pace-theme-center-atom-spin {0%   { -o-transform: rotate(0deg) }100% { -o-transform: rotate(359deg) }}@keyframes pace-theme-center-atom-spin {0%   { transform: rotate(0deg) }100% { transform: rotate(359deg) }}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -87,17 +123,6 @@
     
     <entry>
       <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {    background: linear-gradient(      -45deg,      #e8d8b9,      #eccec5,      #a3e9eb,      #bdbdf0,      #eec1ea    );    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;  }  @-webkit-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @-moz-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }    /* 黑夜模式适配 */  [data-theme="dark"] #aside-content > .card-widget.card-info {    background: #191919ee;  }    /* 个人信息Follow me按钮 */  #aside-content > .card-widget.card-info > #card-info-btn {    background-color: #3eb8be;    border-radius: 8px;  }  /* 分类黑夜模式适配 *//* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {  background: #1e1e1e;  color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {  background: #Fcd3d5;  color: #f2f2f2;}/* 一级菜单居中 */#nav .menus_items {  position: absolute !important;  width: fit-content !important;  left: 50% !important;  transform: translateX(-50%) !important;}/* 子菜单横向展示 */#nav .menus_items .menus_item:hover .menus_item_child {  display: flex !important;}/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */.menus_items .menus_item:nth-child(5) .menus_item_child {  left: -80px;}@font-face {  /* 为载入的字体取名字(随意) */  font-family: 'YSXXK';  /* 字体文件地址(相对或者绝对路径都可以) */  src: url(/font/演示夏行楷.ttf);  /* 定义加粗样式(加粗多少) */  font-weight: normal;  /* 定义字体样式(斜体/非斜体) */  font-style: normal;  /* 定义显示样式 */  font-display: block;}@font-face {  /* 为载入的字体取名字(随意) */  font-family: 'ZQF';  /* 字体文件地址(相对或者绝对路径都可以) */  src: url(/font/醉清风.ttf);  /* 定义加粗样式(加粗多少) */  font-weight: normal;  /* 定义字体样式(斜体/非斜体) */  font-style: normal;  /* 定义显示样式 */  font-display: block;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/yituliu.css"/>
       <url>/css/yituliu.css</url>
       
@@ -108,11 +133,11 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {    background: linear-gradient(      -45deg,      #e8d8b9,      #eccec5,      #a3e9eb,      #bdbdf0,      #eec1ea    );    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;  }  @-webkit-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @-moz-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }    /* 黑夜模式适配 */  [data-theme="dark"] #aside-content > .card-widget.card-info {    background: #191919ee;  }    /* 个人信息Follow me按钮 */  #aside-content > .card-widget.card-info > #card-info-btn {    background-color: #3eb8be;    border-radius: 8px;  }  /* 分类黑夜模式适配 *//* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {  background: #1e1e1e;  color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {  background: #Fcd3d5;  color: #f2f2f2;}/* 一级菜单居中 */#nav .menus_items {  position: absolute !important;  width: fit-content !important;  left: 50% !important;  transform: translateX(-50%) !important;}/* 子菜单横向展示 */#nav .menus_items .menus_item:hover .menus_item_child {  display: flex !important;}/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */.menus_items .menus_item:nth-child(5) .menus_item_child {  left: -80px;}@font-face {  /* 为载入的字体取名字(随意) */  font-family: 'YSXXK';  /* 字体文件地址(相对或者绝对路径都可以) */  src: url(/font/演示夏行楷.ttf);  /* 定义加粗样式(加粗多少) */  font-weight: normal;  /* 定义字体样式(斜体/非斜体) */  font-style: normal;  /* 定义显示样式 */  font-display: block;}@font-face {  /* 为载入的字体取名字(随意) */  font-family: 'ZQF';  /* 字体文件地址(相对或者绝对路径都可以) */  src: url(/font/醉清风.ttf);  /* 定义加粗样式(加粗多少) */  font-weight: normal;  /* 定义字体样式(斜体/非斜体) */  font-style: normal;  /* 定义显示样式 */  font-display: block;}]]></content>
       
     </entry>
     
@@ -152,11 +177,11 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/center-atom.css"/>
-      <url>/css/center-atom.css</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[.pace.pace-inactive {display: none;}.pace {-webkit-pointer-events: none;pointer-events: none;-webkit-user-select: none;-moz-user-select: none;user-select: none;z-index: 2000;position: fixed;height: 60px;width: 100px;margin: auto;top: 0;left: 0;right: 0;bottom: 0;}.pace .pace-progress {z-index: 2000;position: absolute;height: 60px;width: 100px;-webkit-transform: translate3d(0, 0, 0) !important;-ms-transform: translate3d(0, 0, 0) !important;transform: translate3d(0, 0, 0) !important;}.pace .pace-progress:before {content: attr(data-progress-text);text-align: center;color: #fff;background: #29d;border-radius: 50%;font-family: "Helvetica Neue", sans-serif;font-size: 14px;font-weight: 100;line-height: 1;padding: 20% 0 7px;width: 50%;height: 40%;margin: 10px 0 0 30px;display: block;z-index: 999;position: absolute;}.pace .pace-activity {font-size: 15px;line-height: 1;z-index: 2000;position: absolute;height: 60px;width: 100px;display: block;-webkit-animation: pace-theme-center-atom-spin 2s linear infinite;-moz-animation: pace-theme-center-atom-spin 2s linear infinite;-o-animation: pace-theme-center-atom-spin 2s linear infinite;animation: pace-theme-center-atom-spin 2s linear infinite;}.pace .pace-activity {border-radius: 50%;border: 5px solid #29d;content: ' ';display: block;position: absolute;top: 0;left: 0;height: 60px;width: 100px;}.pace .pace-activity:after {border-radius: 50%;border: 5px solid #29d;content: ' ';display: block;position: absolute;top: -5px;left: -5px;height: 60px;width: 100px;-webkit-transform: rotate(60deg);-moz-transform: rotate(60deg);-o-transform: rotate(60deg);transform: rotate(60deg);}.pace .pace-activity:before {border-radius: 50%;border: 5px solid #29d;content: ' ';display: block;position: absolute;top: -5px;left: -5px;height: 60px;width: 100px;-webkit-transform: rotate(120deg);-moz-transform: rotate(120deg);-o-transform: rotate(120deg);transform: rotate(120deg);}@-webkit-keyframes pace-theme-center-atom-spin {0%   { -webkit-transform: rotate(0deg) }100% { -webkit-transform: rotate(359deg) }}@-moz-keyframes pace-theme-center-atom-spin {0%   { -moz-transform: rotate(0deg) }100% { -moz-transform: rotate(359deg) }}@-o-keyframes pace-theme-center-atom-spin {0%   { -o-transform: rotate(0deg) }100% { -o-transform: rotate(359deg) }}@keyframes pace-theme-center-atom-spin {0%   { transform: rotate(0deg) }100% { transform: rotate(359deg) }}]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
